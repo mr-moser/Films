@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Actor" representedClassName="Actor" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="actors" inverseEntity="Film" syncable="YES"/>
+    </entity>
+    <entity name="Contry" representedClassName="Contry" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="countrys" inverseEntity="Film" syncable="YES"/>
+    </entity>
+    <entity name="Director" representedClassName="Director" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="director" inverseEntity="Film" syncable="YES"/>
+    </entity>
+    <entity name="Film" representedClassName="Film" syncable="YES">
+        <attribute name="lenght" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="actors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Actor" inverseName="films" inverseEntity="Actor" syncable="YES"/>
+        <relationship name="countrys" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contry" inverseName="films" inverseEntity="Contry" syncable="YES"/>
+        <relationship name="director" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Director" inverseName="films" inverseEntity="Director" syncable="YES"/>
+        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Genre" inverseName="films" inverseEntity="Genre" syncable="YES"/>
+    </entity>
+    <entity name="Genre" representedClassName="Genre" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="genres" inverseEntity="Film" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Actor" positionX="-9218" positionY="-7101" width="92" height="75"/>
+        <element name="Contry" positionX="-9585" positionY="-7182" width="90" height="75"/>
+        <element name="Director" positionX="-9621" positionY="-6870" width="90" height="75"/>
+        <element name="Film" positionX="-9398" positionY="-7020" width="92" height="135"/>
+        <element name="Genre" positionX="-9162" positionY="-6870" width="90" height="75"/>
+    </elements>
+</model>
