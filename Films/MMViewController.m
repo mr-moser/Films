@@ -35,6 +35,7 @@
     self.singleton = [MMSingleton sharedInstance];
     [self allFilmsObjects];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"TEST FOR GITHUB");
 }
 
 - (void) viewWillAppear:(BOOL)animated {
