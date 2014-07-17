@@ -23,6 +23,9 @@
 @property (nonatomic, strong) MMSingleton *singleton;
 @property (nonatomic, strong) Film *selectedElem;
 
+
+
+
 - (IBAction)addFilmToBase:(id)sender;
 - (IBAction)delFilmToBase:(id)sender;
 
